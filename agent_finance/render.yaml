@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: agent-finance-api
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: pip install -r back/requirements.txt
+    startCommand: uvicorn back.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "30"
+      - key: CORS_ALLOW_ORIGINS
+        value: https://nguyenphamdieuhien.online,https://www.nguyenphamdieuhien.online,https://hiienng.github.io,http://localhost:3000,http://127.0.0.1:5500
