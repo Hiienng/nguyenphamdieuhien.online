@@ -1,3 +1,7 @@
+# Ignore folders
+ignore/
+git_ignore/
+
 # Environment variables - NEVER commit sensitive data
 .env
 .env.local
