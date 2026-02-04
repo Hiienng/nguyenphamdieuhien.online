@@ -16,68 +16,82 @@
 
         body {
             min-height: 100vh;
-            background: #1C1C1C;
+            background: radial-gradient(
+                circle at top left,
+                #1c1c1c,
+                #0d0d0d 60%
+            );
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #C9A55B;
+            color: #e5e7eb;
         }
 
         .container {
-            background: rgba(201, 165, 91, 0.15);
-            max-width: 420px;
             width: 100%;
+            max-width: 420px;
             padding: 36px 32px;
             border-radius: 18px;
-            text-align: center;
+            background: linear-gradient(
+                180deg,
+                #1a1a1a,
+                #0f0f0f
+            );
+            border: 1px solid rgba(255, 215, 130, 0.08);
             box-shadow:
-                0 20px 40px rgba(0, 0, 0, 0.06),
-                0 4px 10px rgba(0, 0, 0, 0.04);
+                0 20px 40px rgba(0, 0, 0, 0.7),
+                inset 0 1px 0 rgba(255, 255, 255, 0.02);
+            text-align: center;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
+            letter-spacing: 0.2px;
+            margin-bottom: 10px;
         }
 
         .logo span {
-            color: #855f0c;
+            color: #f5c26b;
         }
 
         .subtitle {
-            font-size: 15px;
-            color: #8B7355;
-            margin-bottom: 28px;
+            font-size: 14.5px;
             line-height: 1.6;
+            color: #9ca3af;
+            margin-bottom: 28px;
         }
 
         .btn {
             display: inline-block;
             width: 100%;
             padding: 14px 0;
-            font-size: 16px;
-            font-weight: 600;
             border-radius: 12px;
-            border: none;
-            cursor: pointer;
-            background: #E4C78A;
-            color: #8B7355;
+            font-size: 15.5px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            background: linear-gradient(
+                180deg,
+                #f5c26b,
+                #d9a441
+            );
+            color: #1a1a1a;
             text-decoration: none;
+            cursor: pointer;
+            border: none;
             transition: all 0.25s ease;
         }
 
         .btn:hover {
-            background: #C9A55B;
             transform: translateY(-1px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+            box-shadow:
+                0 10px 25px rgba(245, 194, 107, 0.25);
         }
 
         .note {
             margin-top: 18px;
-            font-size: 13px;
-            color: #C9A55B;
+            font-size: 12.5px;
+            color: #6b7280;
         }
 
         @media (max-width: 480px) {
@@ -92,19 +106,23 @@
 
 <div class="container">
     <div class="logo">
-        <span>VietDataVerse</span>
+        Viet<span>DataVerse</span>
     </div>
 
     <div class="subtitle">
-            We’ve moved to a new home<br>
-            to provide you with a better experience.
+        We’ve moved to a new platform<br>
+        to provide you with a better experience.
     </div>
 
     <a href="https://nguyenphamdieuhien.online/vietdataverse/index.html"
-       class="btn"
-       id="redirect-btn">
-        Visit Vietdataverse.online
+       id="redirect-btn"
+       class="btn">
+        Go to new website
     </a>
+
+    <div class="note">
+        You will be redirected after clicking
+    </div>
 </div>
 
 <script>
