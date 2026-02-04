@@ -3,15 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <title>VietDataVerse</title>
-    <script src="redirect.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Inter, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8fafc, #eef2f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f2937;
+        }
+
+        .container {
+            background: #ffffff;
+            max-width: 420px;
+            width: 100%;
+            padding: 36px 32px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.06),
+                0 4px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #6b7280;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 0;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            background: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn:hover {
+            background: #1e4fd8;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+        }
+
+        .note {
+            margin-top: 18px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                margin: 0 16px;
+                padding: 28px 22px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Link user click -->
+<div class="container">
+    <div class="logo">
+        Viet<span>DataVerse</span>
+    </div>
+
+    <div class="subtitle">
+        Chúng tôi đã chuyển sang nền tảng mới<br>
+        để mang lại trải nghiệm tốt hơn cho bạn.
+    </div>
+
     <a href="https://nguyenphamdieuhien.online/vietdataverse/index.html"
-       class="old-link">
-        Truy cập VietDataVerse
+       class="btn"
+       id="redirect-btn">
+        Truy cập website mới
     </a>
+
+    <div class="note">
+        Bạn sẽ được chuyển tiếp ngay sau khi nhấn
+    </div>
+</div>
+
+<script>
+    document.getElementById("redirect-btn").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "https://vietdataverse.online/";
+    });
+</script>
 
 </body>
 </html>
